@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đặc sản Tây Nguyên</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="brand">
+    <h1>Đặc sản Tây Nguyên</h1>
+    <span>Cà phê • Mật ong • Mắc ca • Tiêu • Bơ</span>
+  </div>
+  <div id="cart-badge-wrap">
+    Giỏ hàng: <span id="cart-count">0</span>
+  </div>
+</header>
+
+<main>
+  <section class="toolbar">
+    <input type="text" id="search-input" placeholder="Tìm sản phẩm theo tên...">
+    <select id="category-filter">
+      <option value="all">Tất cả danh mục</option>
+      <option value="coffee">Cà phê</option>
+      <option value="honey">Mật ong</option>
+      <option value="nuts">Hạt / Mắc ca</option>
+      <option value="spice">Gia vị</option>
+      <option value="fruit">Trái cây</option>
+      <option value="handicraft">Thủ công</option>
+    </select>
+  </section>
+
+  <p id="result-meta"></p>
+
+  <section class="product-grid" id="product-grid"></section>
+  <div id="empty-state">Không tìm thấy sản phẩm phù hợp với từ khóa hoặc danh mục đã chọn.</div>
+  <div id="error-state">Đã có lỗi khi hiển thị sản phẩm. Vui lòng tải lại trang.</div>
+
+  <section class="order">
+    <h2>Đặt hàng</h2>
+    <form id="order-form" novalidate>
+      <div class="field" id="field-fullName">
+        <label for="fullName">Họ tên</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Nguyễn Văn A">
+        <div class="field-error">Vui lòng nhập họ tên.</div>
+      </div>
+      <div class="field" id="field-phone">
+        <label for="phone">Số điện thoại</label>
+        <input type="text" id="phone" name="phone" placeholder="0912345678">
+        <div class="field-error">Số điện thoại không hợp lệ (VD: 0912345678 hoặc +84912345678).</div>
+      </div>
+      <div class="field" id="field-address">
+        <label for="address">Địa chỉ</label>
+        <textarea id="address" name="address" rows="3" placeholder="Số nhà, đường, phường/xã, tỉnh/thành"></textarea>
+        <div class="field-error">Vui lòng nhập địa chỉ giao hàng.</div>
+      </div>
+      <button type="submit" id="order-submit">Đặt hàng</button>
+      <div id="order-feedback"></div>
+    </form>
+  </section>
+</main>
+
+<footer class="site">Website Đặc sản Tây Nguyên</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
